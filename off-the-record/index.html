@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Dot Press</title>
+    <title>OFF-THE-RECORD — Red Dot Press</title>
     <meta name="description" content="Red Dot Press, publisher of OFF-THE-RECORD by Anthony Fenech.">
     <link rel="icon" type="image/png" href="/assets/reddot-logo.png">
     <style>
@@ -17,30 +17,42 @@
             align-items: center;
             justify-content: center;
             padding: 24px;
+            text-align: center;
+            font-family: "Courier New", Courier, monospace;
+            color: #000000;
         }
-        .logo-link { display: block; line-height: 0; }
-        .logo {
-            display: block;
-            width: clamp(160px, 40vw, 300px);
-            max-width: 512px;
-            height: auto;
+        h1 {
+            font-size: 18pt;
+            font-weight: bold;
+            letter-spacing: normal;
         }
-        .contact {
+        .byline {
+            margin-top: 12px;
+            font-size: 12pt;
+        }
+        .get-the-book {
             display: inline-block;
             margin-top: 24px;
-            font-family: "Courier New", Courier, monospace;
             font-size: 12pt;
             font-weight: bold;
             text-decoration: underline;
-            letter-spacing: normal;
             color: #000000;
+        }
+        .logo-link { display: block; line-height: 0; margin-top: 40px; }
+        .logo {
+            display: block;
+            width: clamp(80px, 18vw, 120px);
+            max-width: 512px;
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <a class="logo-link" href="/off-the-record">
+    <h1>OFF-THE-RECORD</h1>
+    <p class="byline">by Anthony Fenech</p>
+    <a class="get-the-book" href="https://offrecordbook.com/downloadpage.html">Get the book</a>
+    <a class="logo-link" href="/">
         <img class="logo" src="/assets/reddot-logo.png" alt="Red Dot Press — OFF-THE-RECORD" width="512" height="512">
     </a>
-    <a class="contact" href="mailto:marketing@reddotbooks.com">CONTACT</a>
 </body>
 </html>
