@@ -115,16 +115,6 @@ body {
     text-align: center;
 }
 
-.chapter-subtitle {
-    font-family: var(--font-mono);
-    font-size: var(--font-size-sm);
-    line-height: 1.4;
-    color: var(--color-text-secondary);
-    margin-bottom: var(--space-sm);
-    letter-spacing: var(--letter-spacing-tight);
-    text-align: center;
-}
-
 /* ---- Chapter body ---- */
 .chapter-body {
     font-family: var(--font-serif);
