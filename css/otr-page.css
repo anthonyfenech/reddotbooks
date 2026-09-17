@@ -52,19 +52,17 @@
     --padding-tablet: 2.5rem;
 }
 
-/* ---- Dark mode (device setting) ---- */
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-text-primary: #e0e0e0;
-        --color-text-secondary: #aaaaaa;
-        --color-text-tertiary: #777777;
-        --color-background: #1a1a1a;
-        --color-border: #444444;
-        --color-link: #6db3f2;
-        --color-link-hover: #9dcbf7;
-        --color-accent-red: #cc0000;
-        --color-image-border: #444444;
-    }
+/* ---- Dark mode (toggle-driven, matches offrecordbook.com) ---- */
+[data-theme="dark"] {
+    --color-text-primary: #e0e0e0;
+    --color-text-secondary: #aaaaaa;
+    --color-text-tertiary: #777777;
+    --color-background: #1a1a1a;
+    --color-border: #444444;
+    --color-link: #6db3f2;
+    --color-link-hover: #9dcbf7;
+    --color-accent-red: #cc0000;
+    --color-image-border: #444444;
 }
 
 /* ---- Reset ---- */
@@ -230,3 +228,27 @@ body {
 @media (min-width: 600px) {
     .chapter-title { font-size: 32px; }
 }
+
+/* ---- Theme toggle (copied from offrecordbook.com) ---- */
+.site-header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: var(--space-sm);
+    z-index: 10;
+}
+
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: opacity 0.15s ease;
+    color: var(--color-text-primary);
+}
+
+.theme-toggle:hover { opacity: 0.7; }

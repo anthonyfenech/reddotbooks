@@ -12,9 +12,25 @@
     <meta property="og:description" content="Anthony Fenech, sportswriter and author of OFF-THE-RECORD, published by Red Dot Press.">
     <meta property="og:image" content="https://reddotbooks.com/assets/anthony-fenech.jpg">
     <link rel="icon" type="image/png" href="/assets/reddot-logo.png">
-    <link rel="stylesheet" href="/css/otr-page.css">
+    <!-- CRITICAL: Apply theme BEFORE CSS loads to prevent FOUC -->
+    <script>
+        (function() {
+            // Theme (dark/light) — light is the default; dark only if explicitly chosen
+            if (localStorage.getItem('reader_theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="/css/otr-page.css?v=1">
 </head>
 <body>
+    <header class="site-header">
+        <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+    </header>
     <main class="reader">
         <header class="chapter-header">
             <h1 class="chapter-title">ANTHONY FENECH</h1>
@@ -55,5 +71,6 @@
       ]
     }
     </script>
+    <script type="module" src="/js/theme.js?v=1"></script>
 </body>
 </html>

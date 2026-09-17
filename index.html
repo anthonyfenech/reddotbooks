@@ -6,11 +6,21 @@
     <title>Red Dot Press</title>
     <meta name="description" content="Red Dot Press, publisher of OFF-THE-RECORD by Anthony Fenech.">
     <link rel="icon" type="image/png" href="/assets/reddot-logo.png">
+    <!-- CRITICAL: Apply theme BEFORE CSS loads to prevent FOUC -->
+    <script>
+        (function() {
+            // Theme (dark/light) — light is the default; dark only if explicitly chosen
+            if (localStorage.getItem('reader_theme') === 'dark') {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            }
+        })();
+    </script>
+    <link rel="stylesheet" href="/css/otr-page.css?v=1">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { background-color: #FF0000; }
+        html { background-color: var(--color-background); }
         body {
-            background-color: #FF0000;
+            background-color: var(--color-background);
             min-height: 100vh;
             display: flex;
             flex-direction: column;
@@ -33,14 +43,22 @@
             font-weight: bold;
             text-decoration: underline;
             letter-spacing: normal;
-            color: #000000;
+            color: var(--color-text-primary);
         }
     </style>
 </head>
 <body>
+    <header class="site-header">
+        <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>
+        </button>
+    </header>
     <a class="logo-link" href="/off-the-record/">
         <img class="logo" src="/assets/reddot-logo.png" alt="Red Dot Press — OFF-THE-RECORD" width="512" height="512">
     </a>
     <a class="contact" href="mailto:marketing@reddotbooks.com">CONTACT</a>
+    <script type="module" src="/js/theme.js?v=1"></script>
 </body>
 </html>
