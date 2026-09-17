@@ -301,11 +301,6 @@ body {
     }
 }
 
-/* ---- Small note line (reuses the existing --font-size-sm) ---- */
-.chapter-body p.text-small {
-    font-size: var(--font-size-sm);
-}
-
 /* ---- Button row (author page): reuses .pdf-download-btn for the look,
        in a centred flex row that wraps instead of overflowing.
        Deliberately NOT inside .format-menu, so the grid's
@@ -327,4 +322,35 @@ body {
 
 [data-theme="dark"] .pdf-download-btn:focus-visible {
     outline: 2px solid var(--color-text-primary);
+}
+
+/* ---- Button text: beat .chapter-body a (0,1,1) with a.pdf-download-btn
+       (0,1,1, later in source) and .chapter-body a:hover/:focus (0,2,1)
+       with a.pdf-download-btn:hover/:focus (0,2,1, later in source).
+       No !important needed. ---- */
+a.pdf-download-btn,
+a.pdf-download-btn:link,
+a.pdf-download-btn:visited,
+a.pdf-download-btn:hover,
+a.pdf-download-btn:focus,
+a.pdf-download-btn:active {
+    color: var(--color-background);
+    text-decoration: none;
+    text-align: center;
+}
+
+[data-theme="dark"] a.pdf-download-btn,
+[data-theme="dark"] a.pdf-download-btn:link,
+[data-theme="dark"] a.pdf-download-btn:visited,
+[data-theme="dark"] a.pdf-download-btn:hover,
+[data-theme="dark"] a.pdf-download-btn:focus,
+[data-theme="dark"] a.pdf-download-btn:active {
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+/* ---- Section subheads centered to match the page title and the
+       centered store grid (applies to both content pages) ---- */
+.chapter-body h2 {
+    text-align: center;
 }
