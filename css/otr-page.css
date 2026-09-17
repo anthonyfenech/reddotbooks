@@ -157,10 +157,13 @@ body {
     line-height: 1.6;
 }
 
-/* ---- Blurb: bold italics ---- */
+/* ---- Blurb: bold Courier, upright (back-cover styling) ---- */
 .chapter-body .blurb p {
+    font-family: var(--font-mono);
     font-weight: bold;
-    font-style: italic;
+    font-style: normal;
+    font-size: 1.0625rem;
+    line-height: 1.6;
 }
 
 /* ---- Links ---- */
@@ -395,4 +398,15 @@ a.social-link:active {
     .social-icon {
         width: 26px;
     }
+}
+
+/* ---- Back-cover divider between the blurb and the description.
+       margin-left is set to 0 explicitly to override the browser's
+       default margin-inline: auto, which would centre the <hr>. ---- */
+.blurb-rule {
+    border: none;
+    height: 3px;
+    width: 120px;
+    background: var(--color-text-primary);
+    margin: 2rem auto 2rem 0;
 }
