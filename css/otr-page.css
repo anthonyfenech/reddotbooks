@@ -354,3 +354,15 @@ a.pdf-download-btn:active {
 .chapter-body h2 {
     text-align: center;
 }
+
+/* ---- BOOK DETAILS labels: match the GET THE BOOK store labels
+       (.format-item). Size rule: .format-item is 0.8125rem (13px),
+       which is >= 12px, so its size is used as-is. Letter-spacing rule:
+       0.8px is not above 1px, so it is carried over unhalved.
+       No color, no text-transform (capitals are in the markup). ---- */
+.detail-label {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    letter-spacing: 0.8px;
+    font-size: 0.8125rem;
+}
