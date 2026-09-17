@@ -366,3 +366,33 @@ a.pdf-download-btn:active {
     letter-spacing: 0.8px;
     font-size: 0.8125rem;
 }
+
+/* ---- Social logo row (author page) ----
+       .social-icon sets display size only; the PNGs keep their own colours.
+       28px matches .pdf-download-btn's computed height (~28px:
+       9px text x1.2 + 7px padding x2 + 1px border x2). ---- */
+.social-icon {
+    display: block;
+    width: 28px;
+    height: auto;
+}
+
+/* Beat .chapter-body a (0,1,1) — a.social-link is (0,1,1) and later in
+   source, so it wins the tie. Covers every link state. */
+a.social-link,
+a.social-link:link,
+a.social-link:visited,
+a.social-link:hover,
+a.social-link:focus,
+a.social-link:active {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+    line-height: 0;
+}
+
+@media (max-width: 599px) {
+    .social-icon {
+        width: 26px;
+    }
+}
