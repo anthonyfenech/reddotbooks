@@ -300,3 +300,31 @@ body {
         row-gap: 23px;       /* source 28px */
     }
 }
+
+/* ---- Small note line (reuses the existing --font-size-sm) ---- */
+.chapter-body p.text-small {
+    font-size: var(--font-size-sm);
+}
+
+/* ---- Button row (author page): reuses .pdf-download-btn for the look,
+       in a centred flex row that wraps instead of overflowing.
+       Deliberately NOT inside .format-menu, so the grid's
+       justify-self: start does not apply. ---- */
+.link-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: var(--space-xl) 0;
+}
+
+/* Visible keyboard focus for the store buttons and the author row */
+.pdf-download-btn:focus-visible {
+    outline: 2px solid var(--color-text-primary);
+    outline-offset: 2px;
+}
+
+[data-theme="dark"] .pdf-download-btn:focus-visible {
+    outline: 2px solid var(--color-text-primary);
+}
