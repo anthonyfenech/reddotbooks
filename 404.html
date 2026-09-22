@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red Dot Press</title>
-    <meta name="description" content="Red Dot Press, publisher of OFF-THE-RECORD by Anthony Fenech.">
-    <link rel="canonical" href="https://reddotbooks.com/">
+    <title>Page Not Found — Red Dot Press</title>
+    <meta name="robots" content="noindex, nofollow">
     <link rel="icon" type="image/png" href="/assets/reddot-logo.png">
     <!-- CRITICAL: Apply theme BEFORE CSS loads to prevent FOUC -->
     <script>
@@ -46,20 +45,31 @@
             letter-spacing: normal;
             color: var(--color-text-primary);
         }
+
+        .message {
+            margin-top: 24px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 12pt;
+            color: var(--color-text-primary);
+        }
+        .links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 16px;
+        }
     </style>
 </head>
 <body>
-    <header class="site-header">
-        <button class="theme-toggle" id="themeToggle" title="Toggle dark mode" aria-label="Toggle dark mode">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-            </svg>
-        </button>
-    </header>
-    <a class="logo-link" href="/off-the-record/">
-        <img class="logo" src="/assets/reddot-logo.png" alt="Red Dot Press — OFF-THE-RECORD" width="512" height="512">
+    <a class="logo-link" href="/">
+        <img class="logo" src="/assets/reddot-logo.png" alt="Red Dot Press" width="512" height="512">
     </a>
-    <a class="contact" href="mailto:permissions@reddotbooks.com">CONTACT</a>
-    <script type="module" src="/js/theme.js?v=1"></script>
+    <p class="message">That page doesn't exist.</p>
+    <nav class="links" aria-label="Site">
+        <a class="contact" href="/">HOME</a>
+        <a class="contact" href="/off-the-record/">OFF-THE-RECORD</a>
+        <a class="contact" href="/anthony-fenech/">ANTHONY FENECH</a>
+    </nav>
 </body>
 </html>
