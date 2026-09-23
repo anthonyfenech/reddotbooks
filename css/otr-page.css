@@ -479,3 +479,36 @@ a.social-link:active {
     background: var(--color-text-primary);
     margin: 2rem auto 2rem 0;
 }
+
+/* A section rule sits directly above these three headers. The header's own
+   2.5em top margin would collapse through and widen the gap, so it is zeroed
+   only when a rule immediately precedes it — the rule's 2rem bottom margin
+   then sets the gap, matching the original rule above the opening paragraph. */
+.chapter-body hr.blurb-rule + h2 {
+    margin-top: 0;
+}
+
+/* ---- In-text author link ---- */
+.chapter-body a.author-link {
+    font-family: var(--font-mono);
+    font-weight: bold;
+    font-size: inherit;
+}
+
+.chapter-body a.author-link,
+.chapter-body a.author-link:link,
+.chapter-body a.author-link:visited,
+.chapter-body a.author-link:hover,
+.chapter-body a.author-link:focus,
+.chapter-body a.author-link:active {
+    color: var(--color-link);
+    text-decoration: underline;
+    font-family: var(--font-mono);
+    font-weight: bold;
+    font-size: inherit;
+}
+
+.chapter-body a.author-link:focus-visible {
+    outline: 2px solid var(--color-text-primary);
+    outline-offset: 2px;
+}
