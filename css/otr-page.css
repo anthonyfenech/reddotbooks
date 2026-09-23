@@ -495,13 +495,15 @@ a.social-link:active {
     font-size: inherit;
 }
 
+/* The link takes the paragraph's own text colour in every state — the same
+   variable .chapter-body sets — so dark mode follows automatically. */
 .chapter-body a.author-link,
 .chapter-body a.author-link:link,
 .chapter-body a.author-link:visited,
 .chapter-body a.author-link:hover,
 .chapter-body a.author-link:focus,
 .chapter-body a.author-link:active {
-    color: var(--color-link);
+    color: var(--color-text-primary);
     text-decoration: underline;
     font-family: var(--font-mono);
     font-weight: bold;
